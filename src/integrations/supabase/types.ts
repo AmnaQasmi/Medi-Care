@@ -21,8 +21,10 @@ export type Database = {
           created_at: string
           doctor_id: string
           id: string
+          meet_link: string | null
           notes: string | null
           patient_id: string
+          prescription: string | null
           status: Database["public"]["Enums"]["appointment_status"]
           symptoms: string | null
           updated_at: string
@@ -33,8 +35,10 @@ export type Database = {
           created_at?: string
           doctor_id: string
           id?: string
+          meet_link?: string | null
           notes?: string | null
           patient_id: string
+          prescription?: string | null
           status?: Database["public"]["Enums"]["appointment_status"]
           symptoms?: string | null
           updated_at?: string
@@ -45,8 +49,10 @@ export type Database = {
           created_at?: string
           doctor_id?: string
           id?: string
+          meet_link?: string | null
           notes?: string | null
           patient_id?: string
+          prescription?: string | null
           status?: Database["public"]["Enums"]["appointment_status"]
           symptoms?: string | null
           updated_at?: string
@@ -143,27 +149,33 @@ export type Database = {
       }
       profiles: {
         Row: {
+          age: number | null
           avatar_url: string | null
           created_at: string
           full_name: string
+          gender: string | null
           id: string
           phone: string | null
           updated_at: string
           user_id: string
         }
         Insert: {
+          age?: number | null
           avatar_url?: string | null
           created_at?: string
           full_name: string
+          gender?: string | null
           id?: string
           phone?: string | null
           updated_at?: string
           user_id: string
         }
         Update: {
+          age?: number | null
           avatar_url?: string | null
           created_at?: string
           full_name?: string
+          gender?: string | null
           id?: string
           phone?: string | null
           updated_at?: string

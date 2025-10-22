@@ -74,7 +74,7 @@ export function PatientDashboard() {
               </Link>
             </Button>
             <Button variant="outline" className="w-full justify-start" asChild>
-              <Link to="/appointments">
+              <Link to="/patient/appointments">
                 <Clock className="mr-2 h-4 w-4" />
                 View My Appointments
               </Link>
