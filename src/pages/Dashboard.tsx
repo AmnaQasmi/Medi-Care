@@ -11,6 +11,16 @@ function DashboardContent() {
   const { role, loading } = useUserRole();
   const navigate = useNavigate();
 
+  useEffect(() => {
+    if (!loading && role) {
+      if (role === 'doctor') {
+        navigate('/doctor/dashboard');
+      } else if (role === 'patient') {
+        navigate('/patient/dashboard');
+      }
+    }
+  }, [role, loading, navigate]);
+
   if (loading) {
     return (
       <div className="flex items-center justify-center min-h-[60vh]">
@@ -19,11 +29,7 @@ function DashboardContent() {
     );
   }
 
-  if (role === 'doctor') {
-    return <DoctorDashboard />;
-  }
-
-  return <PatientDashboard />;
+  return null;
 }
 
 export default function Dashboard() {
